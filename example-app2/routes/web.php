@@ -56,7 +56,7 @@ Route::get('cursos/{curso}', function ($curso) {
     }
 });
 */
-Route::get('/', HomeController::class);
+Route::get('/{home}', HomeController::class);
 
 //Route::get('cursos', [CursoController::class, 'index']);
 

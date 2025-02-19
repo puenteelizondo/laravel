@@ -9,8 +9,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //inovke es para que solo administre una sola ruta
-    public function __invoke()
+    public function __invoke($home)
     {
-        return response()->json(['test' => 'bienvenido a la pagina principal']);
+        //es la manera de tarer una variable a html para poder manejarla en la vista
+        return view('home', ['home' => $home]);
     }
 }
