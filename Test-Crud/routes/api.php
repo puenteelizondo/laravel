@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/products', [CRUDController::class, 'createProduct']);
 
-Route::get('/products', [CRUDController::class, 'getAllProducts']);
+Route::get('/products/all', [CRUDController::class, 'getAllProducts']);
 
 Route::get('/products',[CRUDController::class, 'getProduct']);
 
