@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class CRUDController extends Controller
 {
-    public function createProduct(Request $request) // Método dentro de la clase
+    public function createusuario(Request $request) // Método dentro de la clase
     {   //post
         $request->validate([
             'name' => 'required',
@@ -44,7 +44,6 @@ class CRUDController extends Controller
         $products = ProductModel::all();
 
         return response()->json([
-            'message' => 'Success',
             'products' => $products->isEmpty() ? 'No products in database' : $products
         ]);
     }
